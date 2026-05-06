@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Section Contact - Votre Entreprise</title>
+    <link rel="stylesheet" href="contact-style.css">
+    <!-- Font Awesome 6 (icônes gratuites) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<!-- SECTION CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <!-- En-tête de section -->
+            <div class="section-header">
+                <h2 class="section-title">Contactez-nous</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Nous sommes à votre écoute pour répondre à toutes vos questions et vous accompagner dans vos projets.
+                </p>
+            </div>
+
+            <div class="contact-wrapper">
+                <!-- Colonne gauche : Informations -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3><i class="fas fa-paper-plane"></i> Nos coordonnées</h3>
+                        <p>Une question ? Un devis ? Écrivez-nous !</p>
+
+                        <ul class="info-list">
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email</strong>
+                                    <a href="mailto:contact@nexia-afrique.com">contact@nexia-afrique.com</a>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <strong>Téléphone</strong>
+                                    <a href="tel:+2252720213040">+225 27 20 21 30 40</a>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Adresse</strong>
+                                    <span>Cocody - Angré, 7ème tranche<br>Abidjan, Côte d’Ivoire</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>Horaires d'ouverture</strong>
+                                    <span>Lun - Ven : 9h00 - 18h00<br>Sam : 10h00 - 13h00 (sur RDV)</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- Réseaux sociaux -->
+                        <div class="social-links">
+                            <h4>Suivez-nous</h4>
+                            <div class="social-icons">
+                                <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carte Google Maps (optionnelle mais réaliste) -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.927309670889!2d-3.997020824513693!3d5.344820235699452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1e7c2c9b3e8b3%3A0x8b5c6e5f5f5c3a3!2sCocody%2C%20Abidjan%2C%20C%C3%B4te%20d'Ivoire!5e0!3m2!1sfr!2sfr!4v1699021234567!5m2!1sfr!2sfr" 
+                            width="100%" 
+                            height="200" 
+                            style="border:0; border-radius: 16px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Carte Google Maps - Abidjan, Cocody">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Colonne droite : Formulaire de contact -->
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <h3><i class="fas fa-comment-dots"></i> Envoyez-nous un message</h3>
+                        
+                        <div class="form-group">
+                            <div class="input-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="name" name="name" placeholder="Votre nom complet" autocomplete="name">
+                            </div>
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-icon">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" name="email" placeholder="Adresse email" autocomplete="email">
+                            </div>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-icon">
+                                <i class="fas fa-tag"></i>
+                                <input type="text" id="subject" name="subject" placeholder="Sujet (ex: Demande de devis)" autocomplete="off">
+                            </div>
+                            <div class="error-message" id="subjectError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-icon textarea-icon">
+                                <i class="fas fa-pencil-alt"></i>
+                                <textarea id="message" name="message" rows="4" placeholder="Votre message..."></textarea>
+                            </div>
+                            <div class="error-message" id="messageError"></div>
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i> Envoyer le message
+                        </button>
+
+                        <div id="formFeedback" class="feedback-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="contact-script.js"></script>
+</body>
+</html>

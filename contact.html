@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous | NovaFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">NovaFlow</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#features">Fonctionnalités</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="contact-page">
+        <div class="container narrow reveal">
+            <div class="contact-header">
+                <h1>Contactez notre équipe</h1>
+                <p>Vous avez une question sur NovaFlow ? Besoin d'une démonstration personnalisée ou d'assistance technique ? Notre équipe d'experts est là pour vous accompagner dans votre transformation digitale.</p>
+            </div>
+
+            <!-- Section informations de contact -->
+            <div class="contact-info-grid">
+                <div class="info-card">
+                    <div class="info-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>contact@novaflow.io</p>
+                    <small>Réponse sous 24h</small>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <h3>Téléphone</h3>
+                    <p>+33 1 23 45 67 89</p>
+                    <small>Lun-Ven 9h-18h</small>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">💬</div>
+                    <h3>Chat en ligne</h3>
+                    <p>Support instantané</p>
+                    <small>Disponible 24/7</small>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📅</div>
+                    <h3>Démonstration</h3>
+                    <p>Réservez un call</p>
+                    <small>Gratuit et personnalisé</small>
+                </div>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-form-section">
+                    <h2>Envoyez-nous un message</h2>
+                    <p>Remplissez ce formulaire et nous vous répondrons rapidement pour discuter de vos besoins spécifiques.</p>
+
+                    <div class="contact-card">
+                        <form id="contactForm" class="modern-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Nom complet *</label>
+                                    <div class="input-wrapper">
+                                        <span class="input-icon">👤</span>
+                                        <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+                                    </div>
+                                    <span class="error-msg" id="nameError"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email professionnel *</label>
+                                    <div class="input-wrapper">
+                                        <span class="input-icon">✉️</span>
+                                        <input type="email" id="email" name="email" placeholder="votre.email@entreprise.com" required>
+                                    </div>
+                                    <span class="error-msg" id="emailError"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="company">Entreprise</label>
+                                    <div class="input-wrapper">
+                                        <span class="input-icon">🏢</span>
+                                        <input type="text" id="company" name="company" placeholder="Nom de votre entreprise">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Sujet *</label>
+                                    <div class="input-wrapper">
+                                        <span class="input-icon">📌</span>
+                                        <select id="subject" name="subject" required>
+                                            <option value="" disabled selected>Choisissez un sujet</option>
+                                            <option value="demo">Demander une démonstration</option>
+                                            <option value="pricing">Informations tarifaires</option>
+                                            <option value="support">Support technique</option>
+                                            <option value="partnership">Partenariat commercial</option>
+                                            <option value="other">Autre question</option>
+                                        </select>
+                                    </div>
+                                    <span class="error-msg" id="subjectError"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Votre message *</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Décrivez votre projet, vos besoins ou votre question en détail..." required></textarea>
+                                <span class="error-msg" id="messageError"></span>
+                            </div>
+
+                            <div class="form-consent">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="consent" name="consent" required>
+                                    <span class="checkmark"></span>
+                                    J'accepte que mes données soient utilisées pour traiter ma demande et recevoir des informations sur NovaFlow.
+                                </label>
+                                <span class="error-msg" id="consentError"></span>
+                            </div>
+
+                            <div id="formFeedback" class="feedback-message"></div>
+                            <button type="submit" id="submitBtn" class="btn btn-primary btn-block btn-animate">Envoyer ma demande</button>
+                        </form>
+
+                        <div id="contactSuccess" class="success-message hidden">
+                            <div class="success-icon">✅</div>
+                            <h2>Message envoyé avec succès !</h2>
+                            <p>Merci de nous avoir contactés. Notre équipe vous répondra sous 24 heures ouvrées pour discuter de votre projet.</p>
+                            <button type="button" onclick="location.reload()" class="btn btn-outline">Envoyer un autre message</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Pourquoi nous contacter ?</h3>
+                        <ul class="benefits-list">
+                            <li>✓ Réponse garantie sous 24h</li>
+                            <li>✓ Démonstration personnalisée gratuite</li>
+                            <li>✓ Accompagnement technique expert</li>
+                            <li>✓ Support multilingue</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Horaires de contact</h3>
+                        <div class="hours-info">
+                            <p><strong>Lundi - Vendredi</strong></p>
+                            <p>9h00 - 18h00 (CET)</p>
+                            <p><strong>Support d'urgence</strong></p>
+                            <p>24h/24 - 7j/7</p>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Suivez-nous</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">LinkedIn</a>
+                            <a href="#" class="social-link">Twitter</a>
+                            <a href="#" class="social-link">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="padding: 40px 5%; text-align: center; background: #111827; color: white;">
+        <p>&copy; 2026 NovaFlow. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact-javascript.js"></script>
+</body>
+</html>
