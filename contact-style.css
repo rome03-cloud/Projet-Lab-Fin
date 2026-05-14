@@ -377,3 +377,465 @@ body {
 .contact-form-wrapper {
     animation-delay: 0.1s;
 }
+
+/* ========== REDESIGN MODERNE DU FORMULAIRE ========== */
+
+/* Section du formulaire */
+.contact-form-section {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* En-tête du formulaire */
+.form-header {
+    margin-bottom: 40px;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.form-header h2 {
+    font-size: 2rem;
+    color: #1a2a3a;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.form-header p {
+    font-size: 1.05rem;
+    color: #5a6e7c;
+    line-height: 1.6;
+}
+
+/* Container du formulaire moderne */
+.modern-form-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(79, 70, 229, 0.1);
+    animation: fadeInUp 0.7s ease-out forwards;
+}
+
+/* Formulaire */
+.modern-form {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* Groupe de formulaire */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a2a3a;
+    letter-spacing: 0.3px;
+    text-transform: none;
+    display: block;
+}
+
+/* Container d'input pour les effets */
+.input-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Inputs et Selects stylisés */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 1rem;
+    padding: 14px 18px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #1a2a3a;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+    width: 100%;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: #b0b8c1;
+    font-weight: 400;
+}
+
+/* Focus states avec couleur primaire */
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #4f46e5;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Select styling amélioré */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%234f46e5' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+select option {
+    background: #ffffff;
+    color: #1a2a3a;
+}
+
+/* Textarea styling */
+textarea {
+    resize: vertical;
+    min-height: 140px;
+    line-height: 1.5;
+}
+
+textarea:focus {
+    border-color: #4f46e5;
+}
+
+/* Messages d'erreur */
+.error-msg {
+    font-size: 0.85rem;
+    color: #ef4444;
+    display: none;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.form-group.has-error .error-msg {
+    display: block;
+}
+
+.form-group.has-error input,
+.form-group.has-error select,
+.form-group.has-error textarea {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
+
+.form-group.has-error input:focus,
+.form-group.has-error select:focus,
+.form-group.has-error textarea:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Zone de feedback */
+.feedback-message {
+    padding: 16px 20px;
+    border-radius: 12px;
+    font-weight: 500;
+    display: none;
+    animation: slideDown 0.3s ease-out;
+}
+
+.feedback-message.show {
+    display: block;
+}
+
+.feedback-message.success {
+    background: #ecfdf5;
+    border: 2px solid #10b981;
+    color: #065f46;
+}
+
+.feedback-message.error {
+    background: #fef2f2;
+    border: 2px solid #ef4444;
+    color: #991b1b;
+}
+
+/* Bouton d'envoi moderne */
+.submit-btn {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #ffffff;
+    border: none;
+    padding: 16px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+    margin-top: 12px;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+    background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%);
+}
+
+.submit-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Loader spinner */
+.spinner {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Texte du bouton */
+.btn-text,
+.btn-loader {
+    transition: opacity 0.2s ease;
+}
+
+.btn-loader.show {
+    display: inline-flex;
+}
+
+.btn-text.hide {
+    display: none;
+}
+
+/* Message de succès */
+.success-message {
+    background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+    border: 2px solid #10b981;
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    display: none;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.success-message.show {
+    display: block;
+}
+
+.success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: #10b981;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    animation: scaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.success-message h3 {
+    font-size: 1.5rem;
+    color: #065f46;
+    margin: 0;
+}
+
+.success-message p {
+    color: #0d7745;
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.btn-secondary {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+.btn-secondary:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablette */
+@media (max-width: 1024px) {
+    .modern-form-card {
+        padding: 40px;
+    }
+
+    .form-header h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .modern-form-card {
+        padding: 30px 20px;
+    }
+
+    .form-header {
+        margin-bottom: 30px;
+    }
+
+    .form-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-header p {
+        font-size: 0.95rem;
+    }
+
+    .modern-form {
+        gap: 24px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        padding: 12px 16px;
+        font-size: 16px; /* Évite le zoom on mobile */
+    }
+
+    .submit-btn {
+        padding: 14px 24px;
+        font-size: 0.95rem;
+    }
+
+    .success-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+
+    .success-message h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Très petit écran */
+@media (max-width: 480px) {
+    .modern-form-card {
+        padding: 24px 16px;
+        border-radius: 16px;
+    }
+
+    .form-header h2 {
+        font-size: 1.35rem;
+        margin-bottom: 10px;
+    }
+
+    .form-header p {
+        font-size: 0.9rem;
+    }
+
+    .modern-form {
+        gap: 20px;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        border-radius: 10px;
+        padding: 12px 14px;
+    }
+
+    textarea {
+        min-height: 110px;
+    }
+
+    .submit-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        border-radius: 10px;
+    }
+
+    .success-message {
+        padding: 30px 20px;
+    }
+
+    .success-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+
+    .success-message h3 {
+        font-size: 1.15rem;
+    }
+
+    .success-message p {
+        font-size: 0.9rem;
+    }
+
+    .btn-secondary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
